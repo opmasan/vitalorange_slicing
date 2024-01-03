@@ -1,0 +1,27 @@
+aside {
+    background-color: #fff;
+    .ti {
+        font-size: 18px;
+    }
+}
+
+.navbar-brand-image {
+    height: 3rem;
+}
+
+.navbar-vertical.navbar-expand-lg .navbar-brand {
+    padding: 0.25rem 0;
+}
+
+.navbar-nav {
+    .nav-item.active {
+        background-color: var(--nav-link-active-bg);
+        color: var(--nav-link-active-color);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        font-weight: 500;
+        .nav-link-icon {
+            color: var(--nav-link-active-color);
+        }
+    }
+}

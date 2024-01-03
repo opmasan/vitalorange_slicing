@@ -1,0 +1,97 @@
+extends ../layout/base.pug
+block content
+    - var activeMenu = 'products'
+    include ../layout/_sidebar.pug  
+    include ../layout/_header.pug
+    include _form.pug
+    .page-wrapper
+      .page-header.d-print-none
+        .container-xl
+          .row.g-2.align-items-center
+            .col
+              h2.page-title Products
+            .col.text-end
+              a.btn.btn-outline-primary.me-2(href='#') Filters
+              button.btn.btn-primary(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasCreateProduct' aria-controls='offcanvasCreateProduct') Create Product
+              
+      .page-body
+        .container-xl
+          .col-12
+            .card 
+              .table-responsive
+                table.table.table-vcenter.card-table.table-striped
+                  thead
+                    tr
+                      th Product ID
+                      th Name
+                      th Orders
+                      th Coupons
+                      th TestKits
+                      th Status
+                      th 
+                  tbody
+                    tr
+                      td
+                        a(href="#") PRD001
+                      td Health TestKit Basic
+                      td 15
+                      td 10
+                      td 5
+                      td 
+                        .badge.bg-success.me-1
+                        | Available
+                      td
+                        a.btn.btn-link(href='#') Edit
+                        a.btn.btn-link(href='#') Archive
+                    tr
+                      td
+                        a(href="#") PRD002
+                      td Wellness TestKit Advanced
+                      td 20
+                      td 5
+                      td 15
+                      td 
+                        .badge.bg-secondary.me-1
+                        | Out of Stock
+                      td
+                        a.btn.btn-link(href='#') Edit
+                        a.btn.btn-link(href='#') Archive
+                    tr
+                      td
+                        a(href="#") PRD003
+                      td Energy Boost Supplement
+                      td 30
+                      td 25
+                      td 5
+                      td 
+                        .badge.bg-success.me-1
+                        | Available
+                      td
+                        a.btn.btn-link(href='#') Edit
+                        a.btn.btn-link(href='#') Archive
+                    tr
+                      td
+                        a(href="#") PRD004
+                      td RT-PCR CHECK
+                      td 25
+                      td 20
+                      td 5
+                      td 
+                        .badge.bg-warning.me-1
+                        | Low Stock
+                      td
+                        a.btn.btn-link(href='#') Edit
+                        a.btn.btn-link(href='#') Archive
+                    tr
+                      td
+                        a(href="#") PRD005
+                      td Heart Health TestKit
+                      td 10
+                      td 5
+                      td 5
+                      td 
+                        .badge.bg-success.me-1
+                        | Available
+                      td
+                        a.btn.btn-link(href='#') Edit
+                        a.btn.btn-link(href='#') Archive

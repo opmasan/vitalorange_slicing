@@ -1,0 +1,84 @@
+extends ../layout/base.pug
+block content
+    - var activeMenu = 'orders'
+    include ../layout/_sidebar.pug  
+    include ../layout/_header.pug
+    include _form.pug
+    .page-wrapper
+      .page-header.d-print-none
+        .container-xl
+          .row.g-2.align-items-center
+            .col
+              h2.page-title Orders
+            .col.text-end
+              a.btn.btn-outline-primary.me-2(href='#') Filters
+              //- a.btn.btn-primary(href='/orders/form.html') Create Order
+              button.btn.btn-primary(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasCreateOrder' aria-controls='offcanvasCreateOrder') Create Order
+              
+      .page-body
+        .container-xl
+          .col-12
+            .card 
+              .table-responsive
+                table.table.table-vcenter.card-table.table-striped
+                  thead
+                    tr
+                      th Order ID
+                      th Customer
+                      th Order Type
+                      th Quantity
+                      th Utilization
+                      th Title
+                      th Product Details
+                      th Status
+                      th
+                  tbody
+                    tr
+                      td
+                        a(href='#') ORD001
+                      td John Doe
+                      td Coupon
+                      td 3
+                      td 60%
+                      td Health Check Basic
+                      td
+                        | Basic Health TestKit
+                        .text-secondary Coupon Budget: $100
+                      td 
+                        .badge.bg-success.me-1
+                        | Active
+                      td
+                        a.btn.btn-link(href='#') Edit
+                        a.btn.btn-link(href='#') Archive
+                    tr
+                      td
+                        a(href='#') ORD002
+                      td Jane Smith
+                      td TestKits
+                      td 5
+                      td 80%
+                      td Advanced Health Check
+                      td Advanced Health TestKit
+                      td 
+                        .badge.bg-success.me-1
+                        | Active
+                      td
+                        a.btn.btn-link(href='#') Edit
+                        a.btn.btn-link(href='#') Archive
+                    tr
+                      td
+                        a(href='#') ORD003
+                      td Emily Johnson
+                      td Coupon
+                      td 5
+                      td 100%
+                      td Complete Health Check
+                      td
+                        | Complete Health TestKit
+                        .text-secondary Coupon Budget: $500
+                      td 
+                        .badge.bg-secondary.me-1
+                        | Utilized
+                      td
+                        a.btn.btn-link(href='#') Edit
+                        a.btn.btn-link(href='#') Archive

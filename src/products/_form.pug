@@ -1,0 +1,26 @@
+#offcanvasCreateProduct.offcanvas.offcanvas-end(tabindex='-1' aria-labelledby='offcanvasCreateProduct')
+  .offcanvas-header
+    h3.mb-0 Create Product
+    button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+  .offcanvas-body
+    form
+      .form-group.mb-3
+        label.mb-1(for='title') Name (EN)
+        input#title.form-control(type='text')
+      .form-group.mb-3
+        label.mb-1(for='title') Name (NL)
+        input#title.form-control(type='text')
+      .form-group.mb-3
+        label.mb-1(for='details') Description
+        textarea#details.form-control(rows='3')
+      .form-group.mb-3
+        label.mb-1(for='details') Conditions
+        textarea#details.form-control(rows='3')
+      .form-group.mb-3
+        label.mb-1.form-check.form-switch
+          input.form-check-input(type='checkbox')
+          span.form-check-label.mb-1 Appointment
+  .offcanvas-footer.border-top
+    button.btn.btn-primary.me-2(type='submit') Save Product
+    button.btn.btn-outline-primary.me-2(type='button') Save and Add Another
+    button.btn.btn-ghost-danger.me-2(type='button') Cancel

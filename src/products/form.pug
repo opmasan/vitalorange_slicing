@@ -1,0 +1,99 @@
+extends ../layout/base.pug
+block content
+    - var activeMenu = 'orders'
+    include ../layout/_sidebar.pug  
+    include ../layout/_header.pug
+    .page-wrapper
+      .page-header.d-print-none
+        .container-xl
+          .row.g-2.align-items-center
+            .col
+              h2.page-title Create Order
+      .page-body
+        .container-xl
+          form
+            .card 
+              .card-body
+                .form-group.mb-3
+                  label.mb-1(for='customerSelect') Customer
+                  select#customerSelect.form-control(required)
+                    option(value='') Select a customer
+                    option(value='customer1') Customer 1
+                    option(value='customer2') Customer 2
+                    // Add more customer options
+
+                .form-group.mb-3
+                  label.mb-1(for='orderTypeSelect') Order Type
+                  .w-100
+                    .btn-group(role='group')
+                      input#btn-radio-basic-1.btn-check(type='radio' name='btn-radio-basic' autocomplete='off' checked='')
+                      label.mb-1.btn(for='btn-radio-basic-1' type='button') Coupon
+                      input#btn-radio-basic-2.btn-check(type='radio' name='btn-radio-basic' autocomplete='off')
+                      label.mb-1.btn(for='btn-radio-basic-2' type='button') TestKits
+
+                .form-group.mb-3
+                  label.mb-1(for='couponsQuantity') Coupons Quantity
+                  input#couponsQuantity.form-control(type='number' required)
+
+                .form-group.mb-3
+                  label.mb-1(for='title') Title
+                  input#title.form-control(type='text')
+
+                .form-group.mb-3
+                  label.mb-1(for='details') Details
+                  textarea#details.form-control(rows='3')
+
+                .form-group.mb-3
+                  label.mb-1(for='couponBudget') Coupon Budget
+                  input#couponBudget.form-control(type='number' required)
+
+                .form-group.mb-3
+                  label.mb-1(for='couponTotalPoints') Coupon Total Points
+                  input#couponTotalPoints.form-control(type='text')
+              .card-body  
+                h3.card-title Product 1
+                .form-group.mb-3
+                  label.mb-1(for='productNameSelect') Product Name
+                  select#productNameSelect.form-control(required)
+                    option(value='') Select a product
+                    option(value='product1') Product 1
+                    option(value='product2') Product 2
+                    // Add more product options
+
+                .form-group.mb-3
+                  label.mb-1(for='testkitsQuantity') Coupons Quantity
+                  input#testkitsQuantity.form-control(type='number' required)
+
+                .form-group.mb-3
+                  label.mb-1(for='productValue') Product Value
+                  input#productValue.form-control(type='number')
+
+                .form-group.mb-3
+                  label.mb-1(for='pricePerProduct') Price Per Product
+                  input#pricePerProduct.form-control(type='number')
+
+                // Multi-selection possibility fields and buttons
+                .form-group.mb-3
+                  label.mb-1.form-check.form-switch
+                    input.form-check-input(type='checkbox')
+                    span.form-check-label.mb-1 Multi-selection Possibility
+              .card-body
+                button.btn.btn-outline-primary.mb-3(type='button') 
+                  i.ti.ti-package.me-2
+                  | Add Product
+
+                .form-group.mb-3
+                  label.mb-1(for='orderTotalPrice') Order Total Price
+                  input#orderTotalPrice.form-control(type='number')
+
+                .form-group.mb-3
+                  label.mb-1(for='comment') Comment
+                  textarea#comment.form-control(rows='3')
+
+                .form-group.mb-3
+                  label.mb-1(for='attachment') Attachment
+                  input#attachment.form-control(type='file')
+              .card-footer
+                button.btn.btn-primary.me-2(type='submit') Create Order
+                button.btn.btn-outline-primary.me-2(type='button') Create and Add Another
+                button.btn.btn-ghost-danger.me-2(type='button') Cancel

@@ -1,0 +1,164 @@
+extends layout/base.pug
+block content
+    - var activeMenu = 'dashboard'
+    include layout/_sidebar.pug  
+    include layout/_header.pug
+    .page-wrapper
+      .page-header.d-print-none
+        .container-xl
+          .alert.alert-success(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/check
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M5 12l5 5l10 -10')
+              div
+                h4.alert-title This is a custom alert box!
+                .text-secondary Your account has been saved!
+          .row.g-2.align-items-center
+            .col
+              h2.page-title Dashboard
+      .page-body
+        .container-xl
+          .col-12
+            .row.row-cards.row-deck
+              .col-6
+                .card
+                    .card-header
+                      h3.card-title New Purchases
+                        span.card-subtitle Last Month
+                    .card-body.p-0.pb-3
+                      #purchases_chart_div
+                        script(type='text/javascript' src='https://www.gstatic.com/charts/loader.js')
+                        script(type='text/javascript').
+                          google.charts.load('current', {'packages':['corechart']});
+                          google.charts.setOnLoadCallback(drawChart);
+                          function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                              ['Day', 'Purchases'],
+                              ['01',  3],
+                              ['02',  5],
+                              ['03',  2],
+                              ['04',  6],
+                              ['05',  7],
+                              ['06',  3],
+                              ['07',  4],
+                              ['08',  8],
+                              ['09',  5],
+                              ['10',  6],
+                              ['11',  5],
+                              ['12',  6],
+                              ['13',  7],
+                              ['14',  8],
+                              ['15',  4],
+                              ['16',  5],
+                              ['17',  7],
+                              ['18',  8],
+                              ['19',  9],
+                              ['20',  6],
+                              ['21',  5],
+                              ['22',  4],
+                              ['23',  3],
+                              ['24',  6],
+                              ['25',  5],
+                              ['26',  8],
+                              ['27',  7],
+                              ['28',  6],
+                              ['29',  5],
+                              ['30',  4],
+                              ['31',  3]
+                            ]);
+                            var options = {
+                              //- title: 'New Purchases',
+                              curveType: 'function',
+                              legend: { position: 'bottom' }
+                            };
+                            var chart = new google.visualization.LineChart(document.getElementById('purchases_chart_div'));
+                            chart.draw(data, options);
+                          }
+
+                    .card-footer
+                      | Last updated 3 mins ago
+              .col-6
+                .card
+                    .card-header
+                      h3.card-title New Orders
+                        span.card-subtitle Last Month
+                    .card-body.p-0.pb-3
+                      #orders_chart_div
+                        script(type='text/javascript' src='https://www.gstatic.com/charts/loader.js')
+                        script(type='text/javascript').
+                          google.charts.load('current', {'packages':['corechart']});
+                          google.charts.setOnLoadCallback(drawChart);
+                          function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                              ['Task', 'Hours per Day'],
+                              ['Coupon',     11],
+                              ['TestKits',   2]
+                            ]);
+                            var options = {
+                            //- title: 'Coupon vs TestKits'
+                            };
+                            var chart = new google.visualization.PieChart(document.getElementById('orders_chart_div'));
+                            chart.draw(data, options);
+                          }
+                    .card-footer
+                      | Last updated 5 mins ago
+              .col-12
+                .card.card-table
+                    .card-header
+                      h3.card-title New Invoices
+                        span.card-subtitle Last Month
+                    .card-body.p-0.mb-4
+                      table.table
+                        thead.thead-dark
+                          tr
+                            th Invoice ID
+                            th Invoice Date
+                            th Customer Name
+                            th Order №
+                            th Total Amount
+                            th Status
+                        tbody
+                          tr
+                            td
+                              a(href='#') INV001
+                            td 2023-01-01
+                            td 
+                              a(href='#') John Doe
+                            td 
+                              a(href='#') ORD001
+                            td $150.00
+                            td 
+                              .badge.bg-success.me-1
+                              | Paid
+                          tr
+                            td
+                              a(href='#') INV002
+                            td 2023-01-02
+                            td 
+                              a(href='#') Jane Smith
+                            td 
+                              a(href='#') ORD002
+                            td $200.00
+                            td 
+                              .badge.bg-warning.me-1
+                              | Pending
+                          tr
+                            td
+                              a(href='#') INV003
+                            td 2023-01-03
+                            td 
+                              a(href='#') Emily Johnson
+                            td 
+                              a(href='#') ORD003
+                            td $250.00
+                            td 
+                              .badge.bg-danger.me-1
+                              | Overdue
+
+                    .card-footer
+                      | Last updated 1 hour ago
+    include layout/_footer.pug  
+    script(src='index.js')
