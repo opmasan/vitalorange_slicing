@@ -5,7 +5,7 @@ aside.navbar.navbar-vertical.navbar-expand-lg(data-bs-theme='dark')
       span.navbar-toggler-icon
     h1.navbar-brand.navbar-brand-autodark
       a(href='.')
-        img.navbar-brand-image(src='./images/logo.png' width='110' height='32' alt='')
+        img.navbar-brand-image(src='/images/logo.png' width='110' height='32' alt='')
     .navbar-nav.flex-row.d-lg-none
       .nav-item.dropdown
         a.nav-link.d-flex.lh-1.text-reset.p-0(href='#' data-bs-toggle='dropdown' aria-label='Open user menu')
@@ -28,31 +28,31 @@ aside.navbar.navbar-vertical.navbar-expand-lg(data-bs-theme='dark')
               | Dashboard
         
         li.nav-item(class=(activePage === 'orders' ? 'active' : ''))
-          a.nav-link(href='./orders/list.html')
+          a.nav-link(href='/orders/list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
               i.ti.ti-shopping-cart
             span.nav-link-title
               | Orders
         li.nav-item(class=(activePage === 'customers' ? 'active' : ''))
-          a.nav-link(href='./customers/list.html')
+          a.nav-link(href='/customers/list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
               i.ti.ti-users
             span.nav-link-title
               | Customers
         li.nav-item(class=(activePage === 'products' ? 'active' : ''))
-          a.nav-link(href='./products/list.html')
+          a.nav-link(href='/products/list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
              i.ti.ti-package
             span.nav-link-title
               | Products
         li.nav-item(class=(activePage === 'test-kits' ? 'active' : ''))
-          a.nav-link(href='./test-kits/list.html')
+          a.nav-link(href='/test-kits/list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
               i.ti.ti-flask
             span.nav-link-title
               | Test Kits
         li.nav-item(class=(activePage === 'laboratories' ? 'active' : ''))
-          a.nav-link(href='./laboratories/list.html')
+          a.nav-link(href='/laboratories/list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
               i.ti.ti-building-skyscraper
             span.nav-link-title
