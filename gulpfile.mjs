@@ -15,7 +15,7 @@ const bs = browserSync.create();
 gulp.task('pug', function() {
     return gulp.src('src/**/*.pug')
         .pipe(pug({ pretty: true })) // встановіть `pretty: false` для мініфікації HTML
-        .pipe(gulp.dest('dist/'))
+        .pipe(gulp.dest('docs/'))
         .pipe(bs.stream());
 });
 
@@ -24,7 +24,7 @@ gulp.task('sass', function() {
     return gulp.src('src/css/**/*.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer())
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('docs/css'))
         .pipe(bs.stream());
 });
 
@@ -34,26 +34,26 @@ gulp.task('scripts', function() {
         .pipe(concat('all.js'))
         .pipe(uglify())
         .pipe(rename({ extname: '.min.js' }))
-        .pipe(gulp.dest('dist/js'))
+        .pipe(gulp.dest('docs/js'))
         .pipe(bs.stream());
 });
 
 // Images
 gulp.task('images', function() {
     return gulp.src('src/images/**/*')
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('docs/images'));
 });
 
 // Запуск BrowserSync та спостереження за файлами
 gulp.task('serve', function() {
     bs.init({
-        server: "./dist"
+        server: "./docs"
     });
 
     gulp.watch('src/**/*.pug', gulp.series('pug'));
     gulp.watch('src/css/**/*.scss', gulp.series('sass'));
     gulp.watch('src/js/**/*.js', gulp.series('scripts'));
-    gulp.watch("dist/*.html").on('change', bs.reload);
+    gulp.watch("docs/*.html").on('change', bs.reload);
 });
 
 // Задача за замовчуванням
