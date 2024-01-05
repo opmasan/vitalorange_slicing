@@ -30,7 +30,7 @@
             <ul class="navbar-nav pt-lg-3">
               <li class="nav-item"><a class="nav-link" href="/"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-dashboard"></i></span><span class="nav-link-title">Dashboard</span></a></li>
               <li class="nav-item"><a class="nav-link" href="/orders/list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-shopping-cart"></i></span><span class="nav-link-title">Orders</span></a></li>
-              <li class="nav-item active"><a class="nav-link" href="/customers/list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-users"></i></span><span class="nav-link-title">Customers</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/customers/list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-users"></i></span><span class="nav-link-title">Customers</span></a></li>
               <li class="nav-item"><a class="nav-link" href="/products/list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-package"></i></span><span class="nav-link-title">Products</span></a></li>
               <li class="nav-item"><a class="nav-link" href="/test-kits/list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-flask"></i></span><span class="nav-link-title">Test Kits</span></a></li>
               <li class="nav-item"><a class="nav-link" href="/laboratories/list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-building-skyscraper"></i></span><span class="nav-link-title">Laboratories</span></a></li>
@@ -166,54 +166,44 @@
           <div class="container-xl">
             <div class="row g-2 align-items-center">
               <div class="col">
-                <h2 class="page-title">Customers</h2>
+                <h2 class="page-title">Create Lab</h2>
               </div>
-              <div class="col text-end"><a class="btn btn-outline-primary me-2" href="#">Filters</a><a class="btn btn-primary" href="/customers/form.html">Create Customer</a></div>
             </div>
           </div>
         </div>
         <div class="page-body">
           <div class="container-xl">
-            <div class="col-12">
+            <form>
               <div class="card"> 
-                <div class="table-responsive">
-                  <table class="table table-vcenter card-table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Customer</th>
-                        <th>Type</th>
-                        <th>Orders</th>
-                        <th>Total Value</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><a href="#">John Doe</a></td>
-                        <td>Enterprise</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">Jane Smith</a></td>
-                        <td>Distributor</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">Emily Johnson</a></td>
-                        <td>Distributor</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="card-body">
+                  <div class="form-group mb-3">
+                    <label for="laboratoryName">Laboratory Name</label>
+                    <input class="form-control" id="laboratoryName" type="text" required="required">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="labAddress">Lab Address</label>
+                    <input class="form-control" id="labAddress" type="text" required="required">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label>Products (View mode)</label>
+                  </div>
+                  <!-- Тут ви можете вставити Google Maps Plugin-->
+                  <div class="form-group mb-3">
+                    <label>Map with location</label>
+                    <div id="googleMapPlaceholder"></div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="googleMapsAddressDetails">Lab Google Maps Address Details</label>
+                    <input class="form-control" id="googleMapsAddressDetails" type="text" readonly="readonly">
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-primary me-2" type="submit">Create Lab</button>
+                  <button class="btn btn-outline-primary me-2" type="button">Create and Add Another</button>
+                  <button class="btn btn-ghost-danger me-2" type="button">Cancel</button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

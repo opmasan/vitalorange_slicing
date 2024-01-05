@@ -1,0 +1,89 @@
+extends ../layout/base.pug
+block content
+    - var activePage = 'laboratories'
+    include ../layout/_sidebar.pug  
+    include ../layout/_header.pug
+    .page-wrapper
+      .page-header.d-print-none
+        .container-xl
+          .row.g-2.align-items-center
+            .col
+              h2.page-title Laboratories
+            .col.text-end
+              a.btn.btn-outline-primary.me-2(href='#') Filters
+              a.btn.btn-primary(href='./form.html') Create Laboratory
+              
+      .page-body
+        .container-xl
+          .col-12
+            .card 
+              .table-responsive
+                table.table.table-vcenter.card-table.table-striped
+                  thead
+                    tr
+                      th Laboratory Name
+                      th Lab Address
+                      th Products
+                      th Lab Users
+                  tbody
+                    tr
+                      td 
+                        a(href="#") 
+                          | BioTech Lab
+                      td
+                        a.pe-2(href="#")
+                          i.ti.ti-map-pin-filled
+                        span 1234 Science Rd, Innovation City, Netherlands
+                        
+                      td 
+                        a(href="#") 
+                          | 30
+                      td 8
+                    tr
+                      td 
+                        a(href="#") 
+                          | GreenTech Analytics
+                      td
+                        a.pe-2(href="#")
+                          i.ti.ti-map-pin-filled
+                        span 4321 Green St, Eco Town, Netherlands
+                      td 
+                        a(href="#") 
+                          | 45
+                      td 15
+                    tr
+                      td 
+                        a(href="#") 
+                          | Quantum Research Inc.
+                      td
+                        a.pe-2(href="#")
+                          i.ti.ti-map-pin-filled
+                        span 789 Quantum Loop, Techville, Netherlands
+                      td 
+                        a(href="#") 
+                          | 60
+                      td 20
+                    tr
+                      td 
+                        a(href="#") 
+                          | Nano Materials Corp.
+                      td
+                        a.pe-2(href="#")
+                          i.ti.ti-map-pin-filled
+                        span 246 Nano Street, Smallville, US
+                      td 
+                        a(href="#") 
+                          | 37
+                      td 12
+                    tr
+                      td 
+                        a(href="#")   
+                          | Genetics Frontier Lab
+                      td
+                        a.pe-2(href="#")
+                          i.ti.ti-map-pin-filled
+                        span 13 Gene Ave, Biology Bay, US
+                      td 
+                        a(href="#") 
+                          | 55
+                      td 18

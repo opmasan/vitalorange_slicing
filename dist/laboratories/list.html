@@ -30,10 +30,10 @@
             <ul class="navbar-nav pt-lg-3">
               <li class="nav-item"><a class="nav-link" href="/"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-dashboard"></i></span><span class="nav-link-title">Dashboard</span></a></li>
               <li class="nav-item"><a class="nav-link" href="/orders/list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-shopping-cart"></i></span><span class="nav-link-title">Orders</span></a></li>
-              <li class="nav-item active"><a class="nav-link" href="/customers/list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-users"></i></span><span class="nav-link-title">Customers</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/customers/list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-users"></i></span><span class="nav-link-title">Customers</span></a></li>
               <li class="nav-item"><a class="nav-link" href="/products/list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-package"></i></span><span class="nav-link-title">Products</span></a></li>
               <li class="nav-item"><a class="nav-link" href="/test-kits/list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-flask"></i></span><span class="nav-link-title">Test Kits</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="/laboratories/list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-building-skyscraper"></i></span><span class="nav-link-title">Laboratories</span></a></li>
+              <li class="nav-item active"><a class="nav-link" href="/laboratories/list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-building-skyscraper"></i></span><span class="nav-link-title">Laboratories</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./form-elements.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-droplet"></i></span><span class="nav-link-title">Blood Centers</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./form-elements.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-user"></i></span><span class="nav-link-title">End Users</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./form-elements.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-calendar-time"></i></span><span class="nav-link-title">Appoitments</span></a></li>
@@ -166,9 +166,9 @@
           <div class="container-xl">
             <div class="row g-2 align-items-center">
               <div class="col">
-                <h2 class="page-title">Customers</h2>
+                <h2 class="page-title">Laboratories</h2>
               </div>
-              <div class="col text-end"><a class="btn btn-outline-primary me-2" href="#">Filters</a><a class="btn btn-primary" href="/customers/form.html">Create Customer</a></div>
+              <div class="col text-end"><a class="btn btn-outline-primary me-2" href="#">Filters</a><a class="btn btn-primary" href="./form.html">Create Laboratory</a></div>
             </div>
           </div>
         </div>
@@ -180,34 +180,52 @@
                   <table class="table table-vcenter card-table table-striped">
                     <thead>
                       <tr>
-                        <th>Customer</th>
-                        <th>Type</th>
-                        <th>Orders</th>
-                        <th>Total Value</th>
-                        <th></th>
+                        <th>Laboratory Name</th>
+                        <th>Lab Address</th>
+                        <th>Products</th>
+                        <th>Lab Users</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td><a href="#">John Doe</a></td>
-                        <td>Enterprise</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
+                        <td> <a href="#">
+                             BioTech Lab</a></td>
+                        <td><a class="pe-2" href="#"><i class="ti ti-map-pin-filled"></i></a><span>1234 Science Rd, Innovation City, Netherlands</span></td>
+                        <td> <a href="#">
+                             30</a></td>
+                        <td>8</td>
                       </tr>
                       <tr>
-                        <td><a href="#">Jane Smith</a></td>
-                        <td>Distributor</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
+                        <td> <a href="#">
+                             GreenTech Analytics</a></td>
+                        <td><a class="pe-2" href="#"><i class="ti ti-map-pin-filled"></i></a><span>4321 Green St, Eco Town, Netherlands</span></td>
+                        <td> <a href="#">
+                             45</a></td>
+                        <td>15</td>
                       </tr>
                       <tr>
-                        <td><a href="#">Emily Johnson</a></td>
-                        <td>Distributor</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
+                        <td> <a href="#">
+                             Quantum Research Inc.</a></td>
+                        <td><a class="pe-2" href="#"><i class="ti ti-map-pin-filled"></i></a><span>789 Quantum Loop, Techville, Netherlands</span></td>
+                        <td> <a href="#">
+                             60</a></td>
+                        <td>20</td>
+                      </tr>
+                      <tr>
+                        <td> <a href="#">
+                             Nano Materials Corp.</a></td>
+                        <td><a class="pe-2" href="#"><i class="ti ti-map-pin-filled"></i></a><span>246 Nano Street, Smallville, US</span></td>
+                        <td> <a href="#">
+                             37</a></td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td> <a href="#">
+                              Genetics Frontier Lab</a></td>
+                        <td><a class="pe-2" href="#"><i class="ti ti-map-pin-filled"></i></a><span>13 Gene Ave, Biology Bay, US</span></td>
+                        <td> <a href="#">
+                             55</a></td>
+                        <td>18</td>
                       </tr>
                     </tbody>
                   </table>

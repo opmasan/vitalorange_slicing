@@ -1,0 +1,68 @@
+extends ../layout/base.pug
+block content
+    - var activePage = 'test-kits'
+    include ../layout/_sidebar.pug  
+    include ../layout/_header.pug
+    include _form.pug
+    .page-wrapper
+      .page-header.d-print-none
+        .container-xl
+          .row.g-2.align-items-center
+            .col
+              h2.page-title Test Kits
+            .col.text-end
+              a.btn.btn-outline-primary.me-2(href='#') Filters
+              a.btn.btn-primary(href='/orders/form.html') Test Kits
+              
+      .page-body
+        .container-xl
+          .col-12
+            .card 
+              .table-responsive
+                table.table.table-vcenter.card-table.table-striped
+                  thead
+                    tr
+                      th TestKit ID
+                      th QR Code
+                      th Customer
+                      th Orders
+                      th Product
+                      th Appointment
+                      th Status
+                  tbody
+                    tr
+                      td 
+                        a(href="./form.html")
+                          | TK1001
+                      td
+                        a(href="#")
+                          i.ti.ti-18px.ti-qrcode
+                      td John Doe
+                      td 2
+                      td Energy Boost Supplement
+                      td 2024-01-12
+                      td Used/Activated
+                    tr
+                      td 
+                        a(href="./form.html")
+                          | TK1002
+                      td
+                        a(href="#")
+                          i.ti.ti-18px.ti-qrcode
+                      td Jane Smith
+                      td 4
+                      td COVID-19 Test Kit
+                      td 2024-01-13
+                      td Unused
+                    tr
+                      td 
+                        a(href="./form.html")
+                          | TK1003
+                      td
+                        a(href="#")
+                          i.ti.ti-18px.ti-qrcode
+                      td Mike Brown
+                      td 5
+                      td COVID-19 Test Kit
+                      td 2024-01-14
+                      td Delivered/Unused

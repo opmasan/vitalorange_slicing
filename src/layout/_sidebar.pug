@@ -20,39 +20,39 @@ aside.navbar.navbar-vertical.navbar-expand-lg(data-bs-theme='dark')
           a.dropdown-item(href='./sign-in.html') Logout
     #sidebar-menu.collapse.navbar-collapse
       ul.navbar-nav.pt-lg-3
-        li.nav-item(class=(activeMenu === 'dashboard' ? 'active' : ''))
+        li.nav-item(class=(activePage === 'dashboard' ? 'active' : ''))
           a.nav-link(href='/')
             span.nav-link-icon.d-md-none.d-lg-inline-block
               i.ti.ti-dashboard
             span.nav-link-title
               | Dashboard
         
-        li.nav-item(class=(activeMenu === 'orders' ? 'active' : ''))
+        li.nav-item(class=(activePage === 'orders' ? 'active' : ''))
           a.nav-link(href='/orders/list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
               i.ti.ti-shopping-cart
             span.nav-link-title
               | Orders
-        li.nav-item(class=(activeMenu === 'customers' ? 'active' : ''))
+        li.nav-item(class=(activePage === 'customers' ? 'active' : ''))
           a.nav-link(href='/customers/list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
               i.ti.ti-users
             span.nav-link-title
               | Customers
-        li.nav-item(class=(activeMenu === 'products' ? 'active' : ''))
+        li.nav-item(class=(activePage === 'products' ? 'active' : ''))
           a.nav-link(href='/products/list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
              i.ti.ti-package
             span.nav-link-title
               | Products
-        li.nav-item
-          a.nav-link(href='./form-elements.html')
+        li.nav-item(class=(activePage === 'test-kits' ? 'active' : ''))
+          a.nav-link(href='/test-kits/list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
               i.ti.ti-flask
             span.nav-link-title
-              | Tests Kits
-        li.nav-item
-          a.nav-link(href='./form-elements.html')
+              | Test Kits
+        li.nav-item(class=(activePage === 'laboratories' ? 'active' : ''))
+          a.nav-link(href='/laboratories/list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
               i.ti.ti-building-skyscraper
             span.nav-link-title

@@ -1,0 +1,64 @@
+extends ../layout/base.pug
+block content
+    - var activePage = 'Laboratories'
+    include ../layout/_sidebar.pug  
+    include ../layout/_header.pug
+    .page-wrapper
+      .page-header.d-print-none
+        .container-xl
+          .row.g-2.align-items-center
+            .col
+              h2.page-title Create Lab
+      .page-body
+        .container-xl
+          form
+            .card 
+              .card-body
+                .form-group.mb-3
+                  label.mb-1(for='laboratoryName') Laboratory Name
+                  input#laboratoryName.form-control(type='text', required='required')
+
+                .form-group.mb-3
+                  label.mb-1(for='labAddress') Lab Address
+                  input#labAddress.form-control(type='text', required='required')
+
+                .form-group.mb-3
+                  label.mb-1 Products
+                  label.form-check
+                    input.form-check-input(type='checkbox')
+                    span.form-check-label
+                      | Health TestKit Basic
+                    span.form-check-description
+                      | PRD001, Available
+                  label.form-check
+                    input.form-check-input(type='checkbox' disabled)
+                    span.form-check-label
+                      | Wellness TestKit Advanced
+                    span.form-check-description
+                      | PRD002, Out of Stock
+                  label.form-check
+                    input.form-check-input(type='checkbox')
+                    span.form-check-label
+                      | Energy Boost Supplement
+                    span.form-check-description
+                      | PRD003, Available
+                  label.form-check
+                    input.form-check-input(type='checkbox')
+                    span.form-check-label
+                      | RT-PCR CHECK
+                    span.form-check-description
+                      | PRD004, Available
+
+                // Тут ви можете вставити Google Maps Plugin
+                .form-group.mb-3
+                  label.mb-1 Map with location
+                  div
+                    iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4870.054140381333!2d4.826433401779649!3d52.38805958603494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e3ab6f00e5ad%3A0x7a362723dc91018d!2zVGVsZXBvcnQsINCQ0LzRgdGC0LXRgNC00LDQvCwg0J3RltC00LXRgNC70LDQvdC00Lg!5e0!3m2!1suk!2sua!4v1704383572677!5m2!1suk!2sua' style='border:0; width:100%; height:450px;' allowfullscreen='' loading='lazy')
+
+                .form-group.mb-3
+                  label.mb-1(for='googleMapsAddressDetails') Lab Google Maps Address Details
+                  input#googleMapsAddressDetails.form-control(type='text', readonly='readonly')
+              .card-footer
+                button.btn.btn-primary.me-2(type='submit') Create Lab
+                button.btn.btn-outline-primary.me-2(type='button') Create and Add Another
+                button.btn.btn-ghost-danger.me-2(type='button') Cancel
