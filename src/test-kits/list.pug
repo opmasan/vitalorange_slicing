@@ -3,6 +3,17 @@ block content
     - var activePage = 'test-kits'
     include ../layout/_sidebar.pug  
     include ../layout/_header.pug
+    //modal qr code
+    #modal-qr-code.modal.modal-blur.fade(tabindex='-1' role='dialog' aria-hidden='true')
+      .modal-dialog.modal-sm.modal-dialog-centered(role='document')
+        .modal-content
+          .modal-body
+            .modal-title TK1001
+            .d-flex.justify-content-center
+              img(src='./images/qr-code.png' alt='TK1001')
+          .modal-footer
+            button.btn.btn-link(type='button' data-bs-dismiss='modal') Close
+
     .page-wrapper
       .page-header.d-print-none
         .container-xl
@@ -34,7 +45,7 @@ block content
                         a(href="./form.html")
                           | TK1001
                       td
-                        a(href="#")
+                        a(href="#" data-bs-toggle="modal" data-bs-target="#modal-qr-code")
                           i.ti.ti-18px.ti-qrcode
                       td John Doe
                       td 2
