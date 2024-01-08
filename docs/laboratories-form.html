@@ -28,7 +28,7 @@
           </div>
           <div class="collapse navbar-collapse" id="sidebar-menu">
             <ul class="navbar-nav pt-lg-3">
-              <li class="nav-item active"><a class="nav-link" href="./index.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-dashboard"></i></span><span class="nav-link-title">Dashboard</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="./index.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-dashboard"></i></span><span class="nav-link-title">Dashboard</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./orders-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-shopping-cart"></i></span><span class="nav-link-title">Orders</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./customers-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-users"></i></span><span class="nav-link-title">Customers</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./products-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-package"></i></span><span class="nav-link-title">Products</span></a></li>
@@ -164,185 +164,63 @@
       <div class="page-wrapper">
         <div class="page-header d-print-none">
           <div class="container-xl">
-            <div class="alert alert-success" role="alert">
-              <div class="d-flex">
-                <div>
-                  <!-- Download SVG icon from http://tabler-icons.io/i/check-->
-                  <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M5 12l5 5l10 -10"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="alert-title">This is a custom alert box!</h4>
-                  <div class="text-secondary">Your account has been saved!</div>
-                </div>
-              </div>
-            </div>
             <div class="row g-2 align-items-center">
               <div class="col">
-                <h2 class="page-title">Dashboard</h2>
+                <h2 class="page-title">Create Lab</h2>
               </div>
             </div>
           </div>
         </div>
         <div class="page-body">
           <div class="container-xl">
-            <div class="col-12">
-              <div class="row row-cards row-deck">
-                <div class="col-6">
-                  <div class="card">
-                    <div class="card-header">
-                      <h3 class="card-title">New Purchases<span class="card-subtitle">Last Month</span></h3>
+            <form>
+              <div class="card"> 
+                <div class="card-body">
+                  <div class="form-group mb-3">
+                    <label class="mb-1" for="laboratoryName">Laboratory Name</label>
+                    <input class="form-control" id="laboratoryName" type="text" required="required">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label class="mb-1" for="labAddress">Lab Address</label>
+                    <input class="form-control" id="labAddress" type="text" required="required">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label class="mb-1">Products</label>
+                    <label class="form-check">
+                      <input class="form-check-input" type="checkbox"><span class="form-check-label">Health TestKit Basic</span><span class="form-check-description">PRD001, Available</span>
+                    </label>
+                    <label class="form-check">
+                      <input class="form-check-input" type="checkbox" disabled><span class="form-check-label">Wellness TestKit Advanced</span><span class="form-check-description">PRD002, Out of Stock</span>
+                    </label>
+                    <label class="form-check">
+                      <input class="form-check-input" type="checkbox"><span class="form-check-label">Energy Boost Supplement</span><span class="form-check-description">PRD003, Available</span>
+                    </label>
+                    <label class="form-check">
+                      <input class="form-check-input" type="checkbox"><span class="form-check-label">RT-PCR CHECK</span><span class="form-check-description">PRD004, Available</span>
+                    </label>
+                  </div>
+                  <!-- Тут ви можете вставити Google Maps Plugin-->
+                  <div class="form-group mb-3">
+                    <label class="mb-1">Map with location</label>
+                    <div>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4870.054140381333!2d4.826433401779649!3d52.38805958603494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e3ab6f00e5ad%3A0x7a362723dc91018d!2zVGVsZXBvcnQsINCQ0LzRgdGC0LXRgNC00LDQvCwg0J3RltC00LXRgNC70LDQvdC00Lg!5e0!3m2!1suk!2sua!4v1704383572677!5m2!1suk!2sua" style="border:0; width:100%; height:450px;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
-                    <div class="card-body p-0 pb-3">
-                      <div id="purchases_chart_div">
-                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                        <script type="text/javascript">
-                          google.charts.load('current', {'packages':['corechart']});
-                          google.charts.setOnLoadCallback(drawChart);
-                          function drawChart() {
-                            var data = google.visualization.arrayToDataTable([
-                              ['Day', 'Purchases'],
-                              ['01',  3],
-                              ['02',  5],
-                              ['03',  2],
-                              ['04',  6],
-                              ['05',  7],
-                              ['06',  3],
-                              ['07',  4],
-                              ['08',  8],
-                              ['09',  5],
-                              ['10',  6],
-                              ['11',  5],
-                              ['12',  6],
-                              ['13',  7],
-                              ['14',  8],
-                              ['15',  4],
-                              ['16',  5],
-                              ['17',  7],
-                              ['18',  8],
-                              ['19',  9],
-                              ['20',  6],
-                              ['21',  5],
-                              ['22',  4],
-                              ['23',  3],
-                              ['24',  6],
-                              ['25',  5],
-                              ['26',  8],
-                              ['27',  7],
-                              ['28',  6],
-                              ['29',  5],
-                              ['30',  4],
-                              ['31',  3]
-                            ]);
-                            var options = {
-                              //- title: 'New Purchases',
-                              curveType: 'function',
-                              legend: { position: 'bottom' }
-                            };
-                            var chart = new google.visualization.LineChart(document.getElementById('purchases_chart_div'));
-                            chart.draw(data, options);
-                          }
-                          
-                        </script>
-                      </div>
-                    </div>
-                    <div class="card-footer">Last updated 3 mins ago</div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label class="mb-1" for="googleMapsAddressDetails">Lab Google Maps Address Details</label>
+                    <input class="form-control" id="googleMapsAddressDetails" type="text" readonly="readonly">
                   </div>
                 </div>
-                <div class="col-6">
-                  <div class="card">
-                    <div class="card-header">
-                      <h3 class="card-title">New Orders<span class="card-subtitle">Last Month</span></h3>
-                    </div>
-                    <div class="card-body p-0 pb-3">
-                      <div id="orders_chart_div">
-                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                        <script type="text/javascript">
-                          google.charts.load('current', {'packages':['corechart']});
-                          google.charts.setOnLoadCallback(drawChart);
-                          function drawChart() {
-                            var data = google.visualization.arrayToDataTable([
-                              ['Task', 'Hours per Day'],
-                              ['Coupon',     11],
-                              ['TestKits',   2]
-                            ]);
-                            var options = {
-                            //- title: 'Coupon vs TestKits'
-                            };
-                            var chart = new google.visualization.PieChart(document.getElementById('orders_chart_div'));
-                            chart.draw(data, options);
-                          }
-                        </script>
-                      </div>
-                    </div>
-                    <div class="card-footer">Last updated 5 mins ago</div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="card card-table">
-                    <div class="card-header">
-                      <h3 class="card-title">New Invoices<span class="card-subtitle">Last Month</span></h3>
-                    </div>
-                    <div class="card-body p-0 mb-4">
-                      <table class="table">
-                        <thead class="thead-dark">
-                          <tr>
-                            <th>Invoice ID</th>
-                            <th>Invoice Date</th>
-                            <th>Customer Name</th>
-                            <th>Order №</th>
-                            <th>Total Amount</th>
-                            <th>Status</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td><a href="#">INV001</a></td>
-                            <td>2023-01-01</td>
-                            <td> <a href="#">John Doe</a></td>
-                            <td> <a href="#">ORD001</a></td>
-                            <td>$150.00</td>
-                            <td> 
-                              <div class="badge bg-success me-1"></div>Paid
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><a href="#">INV002</a></td>
-                            <td>2023-01-02</td>
-                            <td> <a href="#">Jane Smith</a></td>
-                            <td> <a href="#">ORD002</a></td>
-                            <td>$200.00</td>
-                            <td> 
-                              <div class="badge bg-warning me-1"></div>Pending
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><a href="#">INV003</a></td>
-                            <td>2023-01-03</td>
-                            <td> <a href="#">Emily Johnson</a></td>
-                            <td> <a href="#">ORD003</a></td>
-                            <td>$250.00</td>
-                            <td> 
-                              <div class="badge bg-danger me-1"></div>Overdue
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="card-footer">Last updated 1 hour ago</div>
-                  </div>
+                <div class="card-footer">
+                  <button class="btn btn-primary me-2" type="submit">Create Lab</button>
+                  <button class="btn btn-outline-primary me-2" type="button">Create and Add Another</button>
+                  <button class="btn btn-ghost-danger me-2" type="button">Cancel</button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
-      <footer>
-        <p>2023</p>
-      </footer>
-      <script src="index.js"></script>
     </div>
   </body>
 </html>

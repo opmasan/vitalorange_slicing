@@ -7,17 +7,19 @@ import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import rename from 'gulp-rename';
 import pug from 'gulp-pug';
-import cheerio from 'gulp-cheerio';
 
 const sass = sassModule(dartSass);
 const bs = browserSync.create();
 
 // Pug
 gulp.task('pug', function() {
-    return gulp.src('src/**/*.pug')
+    return gulp.src(['src/**/*.pug', '!src/layout/**/*'])
         .pipe(pug({ pretty: true })) // встановіть `pretty: false` для мініфікації HTML
-        .pipe(cheerio(function ($, file) {
-            $('head').prepend('<base href="/vitalorange_slicing/docs/">');
+        .pipe(rename(function (path) {
+            if(path.dirname !== '.') {
+                path.basename = path.dirname.replace(path.sep, '-') + '-' + path.basename;
+            }
+            path.dirname = '.';
         }))
         .pipe(gulp.dest('docs/'))
         .pipe(bs.stream());

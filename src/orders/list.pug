@@ -3,7 +3,6 @@ block content
     - var activePage = 'orders'
     include ../layout/_sidebar.pug  
     include ../layout/_header.pug
-    include _form.pug
     .page-wrapper
       .page-header.d-print-none
         .container-xl
@@ -12,8 +11,7 @@ block content
               h2.page-title Orders
             .col.text-end
               a.btn.btn-outline-primary.me-2(href='#') Filters
-              //- a.btn.btn-primary(href='/orders/form.html') Create Order
-              button.btn.btn-primary(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasCreateOrder' aria-controls='offcanvasCreateOrder') Create Order
+              a.btn.btn-primary(href='./orders-form.html') Create Order
               
       .page-body
         .container-xl
