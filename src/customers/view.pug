@@ -1,0 +1,230 @@
+extends ../layout/base.pug
+block content
+    - var activePage = 'customers'
+    include ../layout/_sidebar.pug  
+    include ../layout/_header.pug
+    .page-wrapper
+      .page-header.d-print-none
+        .container-xl
+          .row.g-2.align-items-center
+            .col
+              h2.page-title TerraTech
+              nav(aria-label='breadcrumb')
+                ol.breadcrumb
+                  li.breadcrumb-item
+                    a(href='./customers-list.html') Customers
+                  li.breadcrumb-item.active(aria-current='page') TerraTech
+            .col.text-end
+              a.btn.btn-outline-primary.me-2(href='#') Arshive
+              a.btn.btn-primary(href='./customers-form.html') Edit Customer
+      .page-body
+        .container-xl
+          .row
+            .col-6
+              .card.h-100
+                .card-header 
+                  .card-title Details
+                .card-body
+                  .datagrid
+                    //- .datagrid-item
+                    //-   .datagrid-title Customer Name
+                    //-   .datagrid-content TerraTech
+                    .datagrid-item
+                      .datagrid-title Email
+                      .datagrid-content
+                        a.text-reset(href='#') TerraTech@example.com
+                    .datagrid-item
+                      .datagrid-title Type
+                      .datagrid-content Distributor
+                    .datagrid-item
+                      .datagrid-title Phone
+                      .datagrid-content +31 20 123 4567
+                    .datagrid-item
+                      .datagrid-title Address
+                      .datagrid-content Voorbeeldstraat 45, 1012 Amsterdam, Netherlands
+                .card-header 
+                  .card-title Users
+                .table-responsive
+                  table.table.table-vcenter.card-table.last-child-border-none
+                    thead
+                      tr
+                        th Name
+                        th Email
+                        th Role
+                        th.cell-width-100 Receiver of Test Results
+                        th.w-1
+                    tbody
+                      tr
+                        td
+                          a(href='#') Mallory Hulme
+                        td.text-secondary
+                          a.text-reset(href='#') mh222@domainmarket.com
+                        td.text-secondary
+                          | System Admin
+                        td
+                          | Yes
+                        td
+                          a.btn.px-2(href='#')
+                            i.ti.ti-dots-vertical.ti-18px
+                      tr
+                        td
+                          a(href='#') Dunn Slane
+                        td.text-secondary
+                          a.text-reset(href='#') dun.slane@example.com
+                        td.text-secondary
+                          | Delivery Manager
+                        td
+                          | Yes
+                        td
+                          a.btn.px-2(href='#')
+                            i.ti.ti-dots-vertical.ti-18px
+                      tr
+                        td
+                          a(href='#') Maryjo Lebarree
+                        td.text-secondary
+                          a.text-reset(href='#') mlebarree5@example.com
+                        td.text-secondary
+                          | SuperAdmin
+                        td.text-secondary
+                          | No
+                        td
+                          a.btn.px-2(href='#')
+                            i.ti.ti-dots-vertical.ti-18px
+            .col-6
+              .card.h-100
+                .card-header 
+                  .card-title Orders
+                .table-responsive
+                  table.table.table-vcenter.card-table.table-striped
+                    thead
+                      tr
+                        th Order ID
+                        th Order Type
+                        th Quantity
+                        th Status
+                    tbody
+                      tr
+                        td
+                          a(href='#') ORD00055
+                        td Coupon
+                        td 12
+                        td 
+                          .badge.bg-success.me-1
+                          | Active
+                      tr
+                        td
+                          a(href='#') ORD00041
+                        td Test Kit
+                        td 1
+                        td 
+                          .badge.bg-success.me-1
+                          | Active
+                      tr
+                        td
+                          a(href='#') ORD00039
+                        td Coupon
+                        td 12
+                        td 
+                          .badge.bg-success.me-1
+                          | Active
+                      tr
+                        td
+                          a(href='#') ORD00035
+                        td Test Kit
+                        td 1
+                        td 
+                          .badge.bg-success.me-1
+                          | Active
+                      tr
+                        td
+                          a(href='#') ORD00032
+                        td Coupon
+                        td 12
+                        td 
+                          .badge.bg-success.me-1
+                          | Active
+                      tr
+                        td
+                          a(href='#') ORD00026
+                        td Test Kit
+                        td 1
+                        td 
+                          .badge.bg-success.me-1
+                          | Active
+                      tr
+                        td
+                          a(href='#') ORD00023
+                        td Test Kit
+                        td 10
+                        td 
+                          .badge.bg-secondary.me-1
+                          | Utilized
+                      tr
+                        td
+                          a(href='#') ORD00021
+                        td Test Kit
+                        td 10
+                        td 
+                          .badge.bg-secondary.me-1
+                          | Utilized
+                .card-footer.d-flex.align-items-center
+                  p.m-0.text-secondary
+                    | Showing 
+                    span 1 
+                    span to 
+                    span 8
+                    |  of 
+                    span 24
+                    |  orders
+  
+                  ul.pagination.m-0.ms-auto
+                    li.page-item.disabled
+                      a.page-link(href='#' tabindex='-1' aria-disabled='true')
+                        // Download SVG icon from http://tabler-icons.io/i/chevron-left
+                        svg.icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                          path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                          path(d='M15 6l-6 6l6 6')
+                    li.page-item.active
+                      a.page-link(href='#') 1
+                    li.page-item
+                      a.page-link(href='#') 2
+                    li.page-item
+                      a.page-link(href='#') 3
+                    li.page-item
+                      a.page-link(href='#')
+                        // Download SVG icon from http://tabler-icons.io/i/chevron-right
+                        svg.icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                          path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                          path(d='M9 6l6 6l-6 6')
+                          
+              //- .card 
+              //-   .card-header 
+              //-     .card-title Users
+              //-   .table-responsive
+              //-     table.table.table-vcenter.card-table.table-striped
+              //-       thead
+              //-         tr
+              //-           th Order ID
+              //-           th Type
+              //-           th Orders
+              //-           th Total Value
+              //-       tbody
+              //-         tr
+              //-           td
+              //-             a(href='#') John Doe
+              //-           td Enterprise
+              //-           td 1
+              //-           td 2
+              //-         tr
+              //-           td
+              //-             a(href='#') Jane Smith
+              //-           td Distributor
+              //-           td 1
+              //-           td 2
+              //-         tr
+              //-           td
+              //-             a(href='#') Emily Johnson
+              //-           td Distributor
+              //-           td 1
+              //-           td 2
+            

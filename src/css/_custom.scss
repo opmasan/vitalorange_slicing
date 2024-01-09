@@ -1,3 +1,16 @@
 .ti-18px {
     font-size: 18px;
 }
+
+.last-child-border-none {
+    tr:last-child {
+        td {
+            border-bottom: none;
+        }
+    }
+}
+
+table thead th.cell-width-100 {
+    max-width: 100px;
+    white-space: normal;
+}

@@ -166,51 +166,190 @@
           <div class="container-xl">
             <div class="row g-2 align-items-center">
               <div class="col">
-                <h2 class="page-title">Customers</h2>
+                <h2 class="page-title">TerraTech</h2>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./customers-list.html">Customers</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">TerraTech</li>
+                  </ol>
+                </nav>
               </div>
-              <div class="col text-end"><a class="btn btn-outline-primary me-2" href="#">Filters</a><a class="btn btn-primary" href="./customers-form.html">Create Customer</a></div>
+              <div class="col text-end"><a class="btn btn-outline-primary me-2" href="#">Arshive</a><a class="btn btn-primary" href="./customers-form.html">Edit Customer</a></div>
             </div>
           </div>
         </div>
         <div class="page-body">
           <div class="container-xl">
-            <div class="col-12">
-              <div class="card"> 
-                <div class="table-responsive">
-                  <table class="table table-vcenter card-table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Customer</th>
-                        <th>Type</th>
-                        <th>Orders</th>
-                        <th>Total Value</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><a href="./customers-view.html">TerraTech</a></td>
-                        <td>Enterprise</td>
-                        <td>24</td>
-                        <td>2000</td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">GreenGrowth</a></td>
-                        <td>Distributor</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">BrightSolutions</a></td>
-                        <td>Distributor</td>
-                        <td>1</td>
-                        <td>14</td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
+            <div class="row">
+              <div class="col-6">
+                <div class="card h-100">
+                  <div class="card-header"> 
+                    <div class="card-title">Details</div>
+                  </div>
+                  <div class="card-body">
+                    <div class="datagrid">
+                      <div class="datagrid-item">
+                        <div class="datagrid-title">Email</div>
+                        <div class="datagrid-content"><a class="text-reset" href="#">TerraTech@example.com</a></div>
+                      </div>
+                      <div class="datagrid-item">
+                        <div class="datagrid-title">Type</div>
+                        <div class="datagrid-content">Distributor</div>
+                      </div>
+                      <div class="datagrid-item">
+                        <div class="datagrid-title">Phone</div>
+                        <div class="datagrid-content">+31 20 123 4567</div>
+                      </div>
+                      <div class="datagrid-item">
+                        <div class="datagrid-title">Address</div>
+                        <div class="datagrid-content">Voorbeeldstraat 45, 1012 Amsterdam, Netherlands</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-header"> 
+                    <div class="card-title">Users</div>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-vcenter card-table last-child-border-none">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Role</th>
+                          <th class="cell-width-100">Receiver of Test Results</th>
+                          <th class="w-1"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href="#">Mallory Hulme</a></td>
+                          <td class="text-secondary"><a class="text-reset" href="#">mh222@domainmarket.com</a></td>
+                          <td class="text-secondary">System Admin</td>
+                          <td>Yes</td>
+                          <td><a class="btn px-2" href="#"><i class="ti ti-dots-vertical ti-18px"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">Dunn Slane</a></td>
+                          <td class="text-secondary"><a class="text-reset" href="#">dun.slane@example.com</a></td>
+                          <td class="text-secondary">Delivery Manager</td>
+                          <td>Yes</td>
+                          <td><a class="btn px-2" href="#"><i class="ti ti-dots-vertical ti-18px"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">Maryjo Lebarree</a></td>
+                          <td class="text-secondary"><a class="text-reset" href="#">mlebarree5@example.com</a></td>
+                          <td class="text-secondary">SuperAdmin</td>
+                          <td class="text-secondary">No</td>
+                          <td><a class="btn px-2" href="#"><i class="ti ti-dots-vertical ti-18px"></i></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card h-100">
+                  <div class="card-header"> 
+                    <div class="card-title">Orders</div>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-vcenter card-table table-striped">
+                      <thead>
+                        <tr>
+                          <th>Order ID</th>
+                          <th>Order Type</th>
+                          <th>Quantity</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href="#">ORD00055</a></td>
+                          <td>Coupon</td>
+                          <td>12</td>
+                          <td> 
+                            <div class="badge bg-success me-1"></div>Active
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">ORD00041</a></td>
+                          <td>Test Kit</td>
+                          <td>1</td>
+                          <td> 
+                            <div class="badge bg-success me-1"></div>Active
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">ORD00039</a></td>
+                          <td>Coupon</td>
+                          <td>12</td>
+                          <td> 
+                            <div class="badge bg-success me-1"></div>Active
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">ORD00035</a></td>
+                          <td>Test Kit</td>
+                          <td>1</td>
+                          <td> 
+                            <div class="badge bg-success me-1"></div>Active
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">ORD00032</a></td>
+                          <td>Coupon</td>
+                          <td>12</td>
+                          <td> 
+                            <div class="badge bg-success me-1"></div>Active
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">ORD00026</a></td>
+                          <td>Test Kit</td>
+                          <td>1</td>
+                          <td> 
+                            <div class="badge bg-success me-1"></div>Active
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">ORD00023</a></td>
+                          <td>Test Kit</td>
+                          <td>10</td>
+                          <td> 
+                            <div class="badge bg-secondary me-1"></div>Utilized
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">ORD00021</a></td>
+                          <td>Test Kit</td>
+                          <td>10</td>
+                          <td> 
+                            <div class="badge bg-secondary me-1"></div>Utilized
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-footer d-flex align-items-center">
+                    <p class="m-0 text-secondary">Showing <span>1 </span><span>to </span><span>8</span> of <span>24</span> orders</p>
+                    <ul class="pagination m-0 ms-auto">
+                      <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/chevron-left-->
+                          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M15 6l-6 6l6 6"></path>
+                          </svg></a></li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">
+                          <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right-->
+                          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 6l6 6l-6 6"></path>
+                          </svg></a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
