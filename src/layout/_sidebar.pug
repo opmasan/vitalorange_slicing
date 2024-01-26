@@ -57,26 +57,26 @@ aside.navbar.navbar-vertical.navbar-expand-lg(data-bs-theme='dark')
               i.ti.ti-building-skyscraper
             span.nav-link-title
               | Laboratories
-        li.nav-item
-          a.nav-link(href='./form-elements.html')
+        li.nav-item(class=(activePage === 'blood-centers' ? 'active' : ''))
+          a.nav-link(href='./blood-centers-list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
               i.ti.ti-droplet
             span.nav-link-title
               | Blood Centers
-        li.nav-item
-          a.nav-link(href='./form-elements.html')
+        li.nav-item(class=(activePage === 'end-users' ? 'active' : ''))
+          a.nav-link(href='./end-users-list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
               i.ti.ti-user
             span.nav-link-title
               | End Users
-        li.nav-item
-          a.nav-link(href='./form-elements.html')
+        li.nav-item(class=(activePage === 'appointments' ? 'active' : ''))
+          a.nav-link(href='./appointments-list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
                 i.ti.ti-calendar-time
             span.nav-link-title
               | Appoitments
-        li.nav-item
-          a.nav-link(href='./form-elements.html')
+        li.nav-item(class=(activePage === 'vo-users' ? 'active' : ''))
+          a.nav-link(href='./vo-users-list.html')
             span.nav-link-icon.d-md-none.d-lg-inline-block
               i.ti.ti-user-check
             span.nav-link-title

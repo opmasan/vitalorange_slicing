@@ -1,0 +1,29 @@
+#offcanvasTestKitsFilter.offcanvas.offcanvas-end(tabindex='-1' aria-labelledby='offcanvasTestKitsFilter')
+  .offcanvas-header
+    h3.mb-0 Filter Test Kits
+    button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+  .offcanvas-body
+    form
+      .form-group.mb-3
+        label(for='testKitNumber') TestKit Number/QR Code
+        input#testKitNumber.form-control(type='text', placeholder='Enter TestKit Number or QR Code')
+
+      .form-group.mb-3
+        label(for='customerName') Customer Name
+        input#customerName.form-control(type='text', placeholder='Enter Customer Name')
+
+      .form-group.mb-3
+        label(for='order') Order
+        input#order.form-control(type='text', placeholder='Enter Order')
+
+      .form-group.mb-3
+        label(for='product') Product
+        input#product.form-control(type='text', placeholder='Enter Product')
+
+      .form-group.mb-3
+        label(for='appointment') Appointment
+        input#appointment.form-control(type='date')
+  .offcanvas-footer.border-top
+    button.btn.btn-primary.me-2(type='submit') Apply Filters
+    button.btn.btn-outline-primary.me-2(type='button') Reset
+    button.btn.btn-ghost-danger.me-2(type='button' data-bs-dismiss='offcanvas' aria-label='Close') Cancel

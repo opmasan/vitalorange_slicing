@@ -1,0 +1,58 @@
+extends ../layout/base.pug
+block content
+    - var activePage = 'appointments'
+    include ../layout/_sidebar.pug  
+    include ../layout/_header.pug
+    .page-wrapper
+      .page-header.d-print-none
+        .container-xl
+          .row.g-2.align-items-center
+            .col
+              h2.page-title Appointments
+            .col.text-end
+              a.btn.btn-outline-primary.me-2(href='#') Filters
+              a.btn.btn-primary(href='./customers-form.html') Create Appointments
+      .page-body
+        .container-xl
+          .col-12
+            .card 
+              .table-responsive
+                table.table.table-vcenter.card-table.table-striped
+                  thead
+                    tr
+                      th User
+                      th Blood Center
+                      th Product Name
+                      th Status
+                      th Date/Time
+                  tbody
+                    tr
+                      td John Doe
+                      td Central Blood Bank
+                      td Health TestKit Basic
+                      td Scheduled
+                      td 15/01/2024 09:00AM
+                    tr
+                      td Emma Smith
+                      td Downtown Health Facility
+                      td Wellness TestKit Advanced
+                      td Visited
+                      td 18/01/2024 02:00PM
+                    tr
+                      td Michael Brown
+                      td City Hospital
+                      td Energy Boost Supplement
+                      td Visited
+                      td 20/01/2024 01:00PM
+                    tr
+                      td Sarah Johnson
+                      td North Clinic
+                      td Test without appointment
+                      td Cancelled
+                      td 22/01/2024 10:00AM
+                    tr
+                      td Richard Davis
+                      td South Blood Center
+                      td Heart Health TestKit
+                      td Visited
+                      td 25/01/2024 11:30AM

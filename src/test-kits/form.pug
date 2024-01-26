@@ -8,7 +8,7 @@ block content
         .container-xl
           .row.g-2.align-items-center
             .col
-              h2.page-title Create Order
+              h2.page-title Create Test Kit
       .page-body
         .container-xl
           form
@@ -50,36 +50,38 @@ block content
                 .form-group.mb-3
                   label.mb-1(for='couponTotalPoints') Coupon Total Points
                   input#couponTotalPoints.form-control(type='text')
-                h3.card-title.mb-1 Product 1
-                .form-fieldset.mb-3
-                  .form-group.mb-3
-                    label.mb-1(for='productNameSelect') Product Name
-                    select#productNameSelect.form-control(required)
-                      option(value='') Select a product
-                      option(value='product1') Product 1
-                      option(value='product2') Product 2
-                      // Add more product options
+              .card-body  
+                h3.card-title Product 1
+                .form-group.mb-3
+                  label.mb-1(for='productNameSelect') Product Name
+                  select#productNameSelect.form-control(required)
+                    option(value='') Select a product
+                    option(value='product1') Product 1
+                    option(value='product2') Product 2
+                    // Add more product options
 
-                  .form-group.mb-3
-                    label.mb-1(for='testkitsQuantity') Coupons Quantity
-                    input#testkitsQuantity.form-control(type='number' required)
+                .form-group.mb-3
+                  label.mb-1(for='testkitsQuantity') Coupons Quantity
+                  input#testkitsQuantity.form-control(type='number' required)
 
-                  .form-group.mb-3
-                    label.mb-1(for='productValue') Product Value
-                    input#productValue.form-control(type='number')
+                .form-group.mb-3
+                  label.mb-1(for='productValue') Product Value
+                  input#productValue.form-control(type='number')
 
-                  .form-group.mb-3
-                    label.mb-1(for='pricePerProduct') Price Per Product
-                    input#pricePerProduct.form-control(type='number')
+                .form-group.mb-3
+                  label.mb-1(for='pricePerProduct') Price Per Product
+                  input#pricePerProduct.form-control(type='number')
 
-                  .form-group.mb-3
-                    label.mb-1.form-check.form-switch
-                      input.form-check-input(type='checkbox')
-                      span.form-check-label.mb-1 Multi-selection Possibility
-                button.btn.btn-outline-primary.mb-3(type='button') 
-                  i.ti.ti-plus.ti-18px.me-2
-                  | Product
+                // Multi-selection possibility fields and buttons
+                .form-group.mb-3
+                  label.mb-1.form-check.form-switch
+                    input.form-check-input(type='checkbox')
+                    span.form-check-label.mb-1 Multi-selection Possibility
               .card-body
+                button.btn.btn-outline-primary.mb-3(type='button') 
+                  i.ti.ti-package.me-2
+                  | Add Product
+
                 .form-group.mb-3
                   label.mb-1(for='orderTotalPrice') Order Total Price
                   input#orderTotalPrice.form-control(type='number')
@@ -92,6 +94,6 @@ block content
                   label.mb-1(for='attachment') Attachment
                   input#attachment.form-control(type='file')
               .card-footer
-                button.btn.btn-primary.me-2(type='submit') Create Order
+                button.btn.btn-primary.me-2(type='submit') Create Test Kit
                 button.btn.btn-outline-primary.me-2(type='button') Create and Add Another
                 button.btn.btn-ghost-danger.me-2(type='button') Cancel

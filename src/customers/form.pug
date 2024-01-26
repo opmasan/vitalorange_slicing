@@ -1,0 +1,45 @@
+extends ../layout/base.pug
+block content
+    - var activePage = 'orders'
+    include ../layout/_sidebar.pug  
+    include ../layout/_header.pug
+    .page-wrapper
+      .page-header.d-print-none
+        .container-xl
+          .row.g-2.align-items-center
+            .col
+              h2.page-title Create Customer
+              nav(aria-label='breadcrumb')
+                ol.breadcrumb
+                  li.breadcrumb-item
+                    a(href='./customers-list.html') Customers
+                  li.breadcrumb-item.active(aria-current='page') Create Customer
+      .page-body
+        .container-xl
+          form
+            .card 
+              .card-body
+                .form-group.mb-3
+                  label.mb-1(for='title') Customer Name
+                  input#customerName.form-control(type='text')
+                .form-group.mb-3
+                  label.mb-1(for='customerSelect') Role
+                  select#customerSelect.form-control(required)
+                    option(value='') Select Role
+                    option(value='customer1') Role 1
+                    option(value='customer2') Role 2
+
+
+                .form-group.mb-3
+                  label.mb-1(for='orderTotalPrice') Customer Email
+                  input#customerEmail.form-control(type='email')
+
+                .form-group.mb-3
+                  label.mb-1.form-check.form-switch
+                    input.form-check-input(type='checkbox')
+                    span.form-check-label.mb-1 Receiver of Test Results
+
+              .card-footer
+                button.btn.btn-primary.me-2(type='submit') Create Customer
+                button.btn.btn-outline-primary.me-2(type='button') Create and Add Another
+                //- button.btn.btn-ghost-danger.me-2(type='button') Back

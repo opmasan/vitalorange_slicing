@@ -34,10 +34,10 @@
               <li class="nav-item"><a class="nav-link" href="./products-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-package"></i></span><span class="nav-link-title">Products</span></a></li>
               <li class="nav-item active"><a class="nav-link" href="./test-kits-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-flask"></i></span><span class="nav-link-title">Test Kits</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./laboratories-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-building-skyscraper"></i></span><span class="nav-link-title">Laboratories</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="./form-elements.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-droplet"></i></span><span class="nav-link-title">Blood Centers</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="./form-elements.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-user"></i></span><span class="nav-link-title">End Users</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="./form-elements.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-calendar-time"></i></span><span class="nav-link-title">Appoitments</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="./form-elements.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-user-check"></i></span><span class="nav-link-title">VO Users</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="./blood-centers-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-droplet"></i></span><span class="nav-link-title">Blood Centers</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="./end-users-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-user"></i></span><span class="nav-link-title">End Users</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="./appointments-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-calendar-time"></i></span><span class="nav-link-title">Appoitments</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="./vo-users-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-user-check"></i></span><span class="nav-link-title">VO Users</span></a></li>
               <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false"><span class="nav-link-icon d-md-none d-lg-inline-block">
                     <!-- Download SVG icon from http://tabler-icons.io/i/star-->
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -161,6 +161,41 @@
           </div>
         </div>
       </header>
+      <div class="offcanvas offcanvas-end" id="offcanvasTestKitsFilter" tabindex="-1" aria-labelledby="offcanvasTestKitsFilter">
+        <div class="offcanvas-header">
+          <h3 class="mb-0">Filter Test Kits</h3>
+          <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form>
+            <div class="form-group mb-3">
+              <label for="testKitNumber">TestKit Number/QR Code</label>
+              <input class="form-control" id="testKitNumber" type="text" placeholder="Enter TestKit Number or QR Code">
+            </div>
+            <div class="form-group mb-3">
+              <label for="customerName">Customer Name</label>
+              <input class="form-control" id="customerName" type="text" placeholder="Enter Customer Name">
+            </div>
+            <div class="form-group mb-3">
+              <label for="order">Order</label>
+              <input class="form-control" id="order" type="text" placeholder="Enter Order">
+            </div>
+            <div class="form-group mb-3">
+              <label for="product">Product</label>
+              <input class="form-control" id="product" type="text" placeholder="Enter Product">
+            </div>
+            <div class="form-group mb-3">
+              <label for="appointment">Appointment</label>
+              <input class="form-control" id="appointment" type="date">
+            </div>
+          </form>
+        </div>
+        <div class="offcanvas-footer border-top">
+          <button class="btn btn-primary me-2" type="submit">Apply Filters</button>
+          <button class="btn btn-outline-primary me-2" type="button">Reset</button>
+          <button class="btn btn-ghost-danger me-2" type="button" data-bs-dismiss="offcanvas" aria-label="Close">Cancel</button>
+        </div>
+      </div>
       <!--modal qr code-->
       <div class="modal modal-blur fade" id="modal-qr-code" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
@@ -182,7 +217,11 @@
               <div class="col">
                 <h2 class="page-title">Test Kits</h2>
               </div>
-              <div class="col text-end"><a class="btn btn-outline-primary me-2" href="#">Filters</a><a class="btn btn-primary" href="/orders/form.html">Test Kits</a></div>
+              <div class="col text-end"><a class="btn btn-outline-primary me-2" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTestKitsFilter" aria-controls="offcanvasTestKitsFilter">Filters</a>
+                <div class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Export Test Kits
+                  <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#"><i class="ti ti-18px me-2 ti-file-type-csv"></i>Export To CSV</a><a class="dropdown-item" href="#"><i class="ti ti-18px me-2 ti-file-type-pdf"></i>Export To PDF</a></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -196,40 +235,40 @@
                       <tr>
                         <th>TestKit ID</th>
                         <th>QR Code</th>
-                        <th>Customer</th>
-                        <th>Orders</th>
-                        <th>Product</th>
-                        <th>Appointment</th>
+                        <th><a class="text-secondary" href="">Customer<i class="ti ti-arrows-sort ms-2"> </i></a></th>
+                        <th> <a class="text-secondary" href="">Orders<i class="ti ti-arrows-sort ms-2"> </i></a></th>
+                        <th> <a class="text-secondary" href="">Product<i class="ti ti-arrows-sort ms-2"> </i></a></th>
+                        <th> <a class="text-primary" href="">Appointment<i class="ti ti-arrows-sort ms-2"></i></a></th>
                         <th>Status</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td> <a href="./form.html">TK1001</a></td>
+                        <td> <a href="">TK1001</a></td>
                         <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-qr-code"><i class="ti ti-18px ti-qrcode"></i></a></td>
-                        <td>John Doe</td>
+                        <td> <a href="/customers-view.html">TerraTech</a></td>
                         <td>2</td>
                         <td>Energy Boost Supplement</td>
-                        <td>2024-01-12</td>
-                        <td>Used/Activated</td>
+                        <td>22/01/2024</td>
+                        <td>Used</td>
                       </tr>
                       <tr>
-                        <td> <a href="./form.html">TK1002</a></td>
+                        <td> <a href="">TK1002</a></td>
                         <td><a href="#"><i class="ti ti-18px ti-qrcode"></i></a></td>
-                        <td>Jane Smith</td>
+                        <td> <a href="#">GreenGrowth</a></td>
                         <td>4</td>
                         <td>COVID-19 Test Kit</td>
-                        <td>2024-01-13</td>
+                        <td>22/01/2024</td>
                         <td>Unused</td>
                       </tr>
                       <tr>
-                        <td> <a href="./form.html">TK1003</a></td>
+                        <td> <a href="">TK1003</a></td>
                         <td><a href="#"><i class="ti ti-18px ti-qrcode"></i></a></td>
-                        <td>Mike Brown</td>
+                        <td> <a href="#">BrightSolutions</a></td>
                         <td>5</td>
                         <td>COVID-19 Test Kit</td>
-                        <td>2024-01-14</td>
-                        <td>Delivered/Unused</td>
+                        <td>22/01/2024</td>
+                        <td>Delivered</td>
                       </tr>
                     </tbody>
                   </table>

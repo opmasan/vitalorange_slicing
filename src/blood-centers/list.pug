@@ -1,0 +1,79 @@
+extends ../layout/base.pug
+block content
+    - var activePage = 'blood-centers'
+    include ../layout/_sidebar.pug  
+    include ../layout/_header.pug
+    .page-wrapper
+      .page-header.d-print-none
+        .container-xl
+          .row.g-2.align-items-center
+            .col
+              h2.page-title Blood Centers
+            .col.text-end
+              a.btn.btn-outline-primary.me-2(href='#') Filters
+              a.btn.btn-primary(href='./blood-centers-form.html') Create Blood Center
+              
+      .page-body
+        .container-xl
+          .col-12
+            .card 
+              .table-responsive
+                table.table.table-vcenter.card-table.table-striped
+                  thead
+                    tr
+                      th Blood Center Name
+                      th Address
+                      th Contact Person
+                      th Email
+                      th Appointments
+                  tbody
+                    tr
+                      td
+                        a(href="#") City Life Blood Center
+                      td
+                        a.pe-2(href="#")
+                          i.ti.ti-map-pin-filled
+                        span 1234 Science Rd, Innovation City, Netherlands
+                      td Jane Doe
+                      td jane.doe@citylifeblood.org
+                      td 120
+                    tr
+                      td
+                        a(href="#") Riverside Blood Services
+                      td
+                        a.pe-2(href="#")
+                          i.ti.ti-map-pin-filled
+                        span 5678 Health St, Wellness Town, France
+                      td John Smith
+                      td john.smith@riversideblood.com
+                      td 95
+                    tr
+                      td
+                        a(href="#") Harmony Health Blood Bank
+                      td
+                        a.pe-2(href="#")
+                          i.ti.ti-map-pin-filled
+                        span 9012 Care Ave, Harmony City, Spain
+                      td Emily Clark
+                      td emily.clark@harmonyblood.org
+                      td 150
+                    tr
+                      td
+                        a(href="#") Mountainview Blood Donation
+                      td
+                        a.pe-2(href="#")
+                          i.ti.ti-map-pin-filled
+                        span 3456 Peak Rd, Mountainview, Italy
+                      td Carlos Gomez
+                      td carlos.gomez@mountainblood.com
+                      td 70
+                    tr
+                      td
+                        a(href="#") Downtown Blood Network
+                      td
+                        a.pe-2(href="#")
+                          i.ti.ti-map-pin-filled
+                        span 7890 Metro Blvd, Downtown, Germany
+                      td Anna Chen
+                      td anna.chen@downtownblood.net
+                      td 110

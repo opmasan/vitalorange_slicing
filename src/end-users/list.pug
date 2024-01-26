@@ -1,0 +1,51 @@
+extends ../layout/base.pug
+block content
+    - var activePage = 'end-users'
+    include ../layout/_sidebar.pug  
+    include ../layout/_header.pug
+    .page-wrapper
+      .page-header.d-print-none
+        .container-xl
+          .row.g-2.align-items-center
+            .col
+              h2.page-title End Users
+            .col.text-end
+              a.btn.btn-outline-primary.me-2(href='#') Filters
+              //- a.btn.btn-primary(href='./customers-form.html') Create Customer
+      .page-body
+        .container-xl
+          .col-12
+            .card 
+              .table-responsive
+                table.table.table-vcenter.card-table.table-striped
+                  thead
+                    tr
+                      th User Name
+                      th Email
+                      th Appointments
+                      th
+                  tbody
+                    tr
+                      td Mallory Hulme	
+                      td 
+                        a(href='')
+                          | mh222@domainmarket.com
+                      td 24
+                      td
+                        a.btn.btn-link(href='#') Lock
+                    tr
+                      td Dunn Slane	
+                      td 
+                        a(href='')
+                          | dun.slane@example.com
+                      td 12
+                      td
+                        a.btn.btn-link(href='#') Lock
+                    tr
+                      td Maryjo Lebarree	
+                      td 
+                        a(href='')
+                          | mlebarree5@example.com
+                      td 20
+                      td
+                        a.btn.btn-link(href='#') Lock

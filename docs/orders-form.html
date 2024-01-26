@@ -34,10 +34,10 @@
               <li class="nav-item"><a class="nav-link" href="./products-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-package"></i></span><span class="nav-link-title">Products</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./test-kits-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-flask"></i></span><span class="nav-link-title">Test Kits</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./laboratories-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-building-skyscraper"></i></span><span class="nav-link-title">Laboratories</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="./form-elements.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-droplet"></i></span><span class="nav-link-title">Blood Centers</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="./form-elements.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-user"></i></span><span class="nav-link-title">End Users</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="./form-elements.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-calendar-time"></i></span><span class="nav-link-title">Appoitments</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="./form-elements.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-user-check"></i></span><span class="nav-link-title">VO Users</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="./blood-centers-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-droplet"></i></span><span class="nav-link-title">Blood Centers</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="./end-users-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-user"></i></span><span class="nav-link-title">End Users</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="./appointments-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-calendar-time"></i></span><span class="nav-link-title">Appoitments</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="./vo-users-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-user-check"></i></span><span class="nav-link-title">VO Users</span></a></li>
               <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false"><span class="nav-link-icon d-md-none d-lg-inline-block">
                     <!-- Download SVG icon from http://tabler-icons.io/i/star-->
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -216,39 +216,38 @@
                     <label class="mb-1" for="couponTotalPoints">Coupon Total Points</label>
                     <input class="form-control" id="couponTotalPoints" type="text">
                   </div>
-                </div>
-                <div class="card-body"> 
-                  <h3 class="card-title">Product 1</h3>
-                  <div class="form-group mb-3">
-                    <label class="mb-1" for="productNameSelect">Product Name</label>
-                    <select class="form-control" id="productNameSelect" required>
-                      <option value="">Select a product</option>
-                      <option value="product1">Product 1</option>
-                      <option value="product2">Product 2</option>
-                      <!-- Add more product options-->
-                    </select>
+                  <h3 class="card-title mb-1">Product 1</h3>
+                  <div class="form-fieldset mb-3">
+                    <div class="form-group mb-3">
+                      <label class="mb-1" for="productNameSelect">Product Name</label>
+                      <select class="form-control" id="productNameSelect" required>
+                        <option value="">Select a product</option>
+                        <option value="product1">Product 1</option>
+                        <option value="product2">Product 2</option>
+                        <!-- Add more product options-->
+                      </select>
+                    </div>
+                    <div class="form-group mb-3">
+                      <label class="mb-1" for="testkitsQuantity">Coupons Quantity</label>
+                      <input class="form-control" id="testkitsQuantity" type="number" required>
+                    </div>
+                    <div class="form-group mb-3">
+                      <label class="mb-1" for="productValue">Product Value</label>
+                      <input class="form-control" id="productValue" type="number">
+                    </div>
+                    <div class="form-group mb-3">
+                      <label class="mb-1" for="pricePerProduct">Price Per Product</label>
+                      <input class="form-control" id="pricePerProduct" type="number">
+                    </div>
+                    <div class="form-group mb-3">
+                      <label class="mb-1 form-check form-switch">
+                        <input class="form-check-input" type="checkbox"><span class="form-check-label mb-1">Multi-selection Possibility</span>
+                      </label>
+                    </div>
                   </div>
-                  <div class="form-group mb-3">
-                    <label class="mb-1" for="testkitsQuantity">Coupons Quantity</label>
-                    <input class="form-control" id="testkitsQuantity" type="number" required>
-                  </div>
-                  <div class="form-group mb-3">
-                    <label class="mb-1" for="productValue">Product Value</label>
-                    <input class="form-control" id="productValue" type="number">
-                  </div>
-                  <div class="form-group mb-3">
-                    <label class="mb-1" for="pricePerProduct">Price Per Product</label>
-                    <input class="form-control" id="pricePerProduct" type="number">
-                  </div>
-                  <!-- Multi-selection possibility fields and buttons-->
-                  <div class="form-group mb-3">
-                    <label class="mb-1 form-check form-switch">
-                      <input class="form-check-input" type="checkbox"><span class="form-check-label mb-1">Multi-selection Possibility</span>
-                    </label>
-                  </div>
+                  <button class="btn btn-outline-primary mb-3" type="button"> <i class="ti ti-plus ti-18px me-2"></i>Product</button>
                 </div>
                 <div class="card-body">
-                  <button class="btn btn-outline-primary mb-3" type="button"> <i class="ti ti-package me-2"></i>Add Product</button>
                   <div class="form-group mb-3">
                     <label class="mb-1" for="orderTotalPrice">Order Total Price</label>
                     <input class="form-control" id="orderTotalPrice" type="number">

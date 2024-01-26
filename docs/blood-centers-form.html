@@ -31,7 +31,7 @@
               <li class="nav-item"><a class="nav-link" href="./index.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-dashboard"></i></span><span class="nav-link-title">Dashboard</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./orders-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-shopping-cart"></i></span><span class="nav-link-title">Orders</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./customers-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-users"></i></span><span class="nav-link-title">Customers</span></a></li>
-              <li class="nav-item active"><a class="nav-link" href="./products-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-package"></i></span><span class="nav-link-title">Products</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="./products-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-package"></i></span><span class="nav-link-title">Products</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./test-kits-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-flask"></i></span><span class="nav-link-title">Test Kits</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./laboratories-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-building-skyscraper"></i></span><span class="nav-link-title">Laboratories</span></a></li>
               <li class="nav-item"><a class="nav-link" href="./blood-centers-list.html"><span class="nav-link-icon d-md-none d-lg-inline-block"><i class="ti ti-droplet"></i></span><span class="nav-link-title">Blood Centers</span></a></li>
@@ -161,133 +161,48 @@
           </div>
         </div>
       </header>
-      <div class="offcanvas offcanvas-end" id="offcanvasCreateProduct" tabindex="-1" aria-labelledby="offcanvasCreateProduct">
-        <div class="offcanvas-header">
-          <h3 class="mb-0">Create Product</h3>
-          <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <form>
-            <div class="form-group mb-3">
-              <label class="mb-1" for="title">Name (EN)</label>
-              <input class="form-control" id="title" type="text">
-            </div>
-            <div class="form-group mb-3">
-              <label class="mb-1" for="title">Name (NL)</label>
-              <input class="form-control" id="title" type="text">
-            </div>
-            <div class="form-group mb-3">
-              <label class="mb-1" for="details">Description</label>
-              <textarea class="form-control" id="details" rows="3"></textarea>
-            </div>
-            <div class="form-group mb-3">
-              <label class="mb-1" for="details">Conditions</label>
-              <textarea class="form-control" id="details" rows="3"></textarea>
-            </div>
-            <div class="form-group mb-3">
-              <label class="mb-1 form-check form-switch">
-                <input class="form-check-input" type="checkbox"><span class="form-check-label mb-1">Appointment</span>
-              </label>
-            </div>
-          </form>
-        </div>
-        <div class="offcanvas-footer border-top">
-          <button class="btn btn-primary me-2" type="submit">Save Product</button>
-          <button class="btn btn-outline-primary me-2" type="button">Save and Add Another</button>
-          <button class="btn btn-ghost-danger me-2" type="button">Cancel</button>
-        </div>
-      </div>
       <div class="page-wrapper">
         <div class="page-header d-print-none">
           <div class="container-xl">
             <div class="row g-2 align-items-center">
               <div class="col">
-                <h2 class="page-title">Products</h2>
-              </div>
-              <div class="col text-end"><a class="btn btn-outline-primary me-2" href="#">Filters</a>
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCreateProduct" aria-controls="offcanvasCreateProduct">Create Product</button>
+                <h2 class="page-title">Create Blood Center</h2>
               </div>
             </div>
           </div>
         </div>
         <div class="page-body">
           <div class="container-xl">
-            <div class="col-12">
+            <form>
               <div class="card"> 
-                <div class="table-responsive">
-                  <table class="table table-vcenter card-table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Product ID</th>
-                        <th>Name</th>
-                        <th>Orders</th>
-                        <th>Coupons</th>
-                        <th>TestKits</th>
-                        <th>Status</th>
-                        <th> </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><a href="#">PRD0001</a></td>
-                        <td>Health TestKit Basic</td>
-                        <td>15</td>
-                        <td>10</td>
-                        <td>5</td>
-                        <td> 
-                          <div class="badge bg-success me-1"></div>Available
-                        </td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">PRD0002</a></td>
-                        <td>Wellness TestKit Advanced</td>
-                        <td>20</td>
-                        <td>5</td>
-                        <td>15</td>
-                        <td> 
-                          <div class="badge bg-secondary me-1"></div>Out of Stock
-                        </td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">PRD0003</a></td>
-                        <td>Energy Boost Supplement</td>
-                        <td>30</td>
-                        <td>25</td>
-                        <td>5</td>
-                        <td> 
-                          <div class="badge bg-success me-1"></div>Available
-                        </td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">PRD0004</a></td>
-                        <td>RT-PCR CHECK</td>
-                        <td>25</td>
-                        <td>20</td>
-                        <td>5</td>
-                        <td> 
-                          <div class="badge bg-warning me-1"></div>Low Stock
-                        </td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">PRD0005</a></td>
-                        <td>Heart Health TestKit</td>
-                        <td>10</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td> 
-                          <div class="badge bg-success me-1"></div>Available
-                        </td>
-                        <td><a class="btn btn-link" href="#">Edit</a><a class="btn btn-link" href="#">Archive</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="card-body">
+                  <div class="form-group mb-3">
+                    <label class="mb-1" for="laboratoryName">Blood Center Name</label>
+                    <input class="form-control" id="bloodCenterName" type="text" required="required">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label class="mb-1" for="labAddress">Blood Center Address</label>
+                    <input class="form-control" id="bloodCenterAddress" type="text" required="required">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label class="mb-1" for="labAddress">Contact Person</label>
+                    <input class="form-control" id="bloodCenterContactPerson" type="text" required="required">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label class="mb-1">Working Hours</label>
+                    <div class="input-group">
+                      <input class="form-control" id="workingHoursStart" type="time" required="required"><span class="input-group-text">To</span>
+                      <input class="form-control" id="workingHoursEnd" type="time" required="required">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-primary me-2" type="submit">Create Blood Center</button>
+                  <button class="btn btn-outline-primary me-2" type="button">Create and Add Another</button>
+                  <button class="btn btn-ghost-danger me-2" type="button">Cancel</button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

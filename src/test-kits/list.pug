@@ -3,6 +3,7 @@ block content
     - var activePage = 'test-kits'
     include ../layout/_sidebar.pug  
     include ../layout/_header.pug
+    include _filters.pug
     //modal qr code
     #modal-qr-code.modal.modal-blur.fade(tabindex='-1' role='dialog' aria-hidden='true')
       .modal-dialog.modal-sm.modal-dialog-centered(role='document')
@@ -21,8 +22,18 @@ block content
             .col
               h2.page-title Test Kits
             .col.text-end
-              a.btn.btn-outline-primary.me-2(href='#') Filters
-              a.btn.btn-primary(href='/orders/form.html') Test Kits
+              a.btn.btn-outline-primary.me-2(href="#" data-bs-toggle='offcanvas' data-bs-target='#offcanvasTestKitsFilter' aria-controls='offcanvasTestKitsFilter') Filters
+              .btn.btn-outline-primary.dropdown-toggle( data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Export Test Kits
+                .dropdown-menu.dropdown-menu-end
+                  a.dropdown-item(href='#')
+                    i.ti.ti-18px.me-2.ti-file-type-csv
+                    | Export To CSV
+                  a.dropdown-item(href='#')
+                    i.ti.ti-18px.me-2.ti-file-type-pdf
+                    | Export To PDF
+
+              //- a.btn.btn-primary(href='test-kits-form.html') Create Test Kit
               
       .page-body
         .container-xl
@@ -34,45 +45,60 @@ block content
                     tr
                       th TestKit ID
                       th QR Code
-                      th Customer
-                      th Orders
-                      th Product
-                      th Appointment
+                      th
+                        a.text-secondary(href="")
+                          | Customer
+                          i.ti.ti-arrows-sort.ms-2 
+                      th 
+                        a.text-secondary(href="")
+                          | Orders
+                          i.ti.ti-arrows-sort.ms-2 
+                      th 
+                        a.text-secondary(href="")
+                          | Product
+                          i.ti.ti-arrows-sort.ms-2 
+                      th 
+                        a.text-primary(href="")
+                          | Appointment
+                          i.ti.ti-arrows-sort.ms-2
                       th Status
                   tbody
                     tr
                       td 
-                        a(href="./form.html")
+                        a(href="")
                           | TK1001
                       td
                         a(href="#" data-bs-toggle="modal" data-bs-target="#modal-qr-code")
                           i.ti.ti-18px.ti-qrcode
-                      td John Doe
+                      td  
+                        a(href="/customers-view.html") TerraTech
                       td 2
                       td Energy Boost Supplement
-                      td 2024-01-12
-                      td Used/Activated
+                      td 22/01/2024
+                      td Used
                     tr
                       td 
-                        a(href="./form.html")
+                        a(href="")
                           | TK1002
                       td
                         a(href="#")
                           i.ti.ti-18px.ti-qrcode
-                      td Jane Smith
+                      td 
+                        a(href="#") GreenGrowth
                       td 4
                       td COVID-19 Test Kit
-                      td 2024-01-13
+                      td 22/01/2024
                       td Unused
                     tr
                       td 
-                        a(href="./form.html")
+                        a(href="")
                           | TK1003
                       td
                         a(href="#")
                           i.ti.ti-18px.ti-qrcode
-                      td Mike Brown
+                      td 
+                        a(href="#") BrightSolutions
                       td 5
                       td COVID-19 Test Kit
-                      td 2024-01-14
-                      td Delivered/Unused
+                      td 22/01/2024
+                      td Delivered

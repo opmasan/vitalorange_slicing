@@ -1,0 +1,35 @@
+extends ../layout/base.pug
+block content
+    - var activePage = 'Laboratories'
+    include ../layout/_sidebar.pug  
+    include ../layout/_header.pug
+    .page-wrapper
+      .page-header.d-print-none
+        .container-xl
+          .row.g-2.align-items-center
+            .col
+              h2.page-title Create Blood Center
+      .page-body
+        .container-xl
+          form
+            .card 
+              .card-body
+                .form-group.mb-3
+                  label.mb-1(for='laboratoryName') Blood Center Name
+                  input#bloodCenterName.form-control(type='text', required='required')
+                .form-group.mb-3
+                  label.mb-1(for='labAddress') Blood Center Address
+                  input#bloodCenterAddress.form-control(type='text', required='required')
+                .form-group.mb-3
+                  label.mb-1(for='labAddress') Contact Person
+                  input#bloodCenterContactPerson.form-control(type='text', required='required')
+                .form-group.mb-3
+                  label.mb-1 Working Hours
+                  .input-group
+                    input#workingHoursStart.form-control(type='time', required='required')
+                    span.input-group-text To
+                    input#workingHoursEnd.form-control(type='time', required='required')
+              .card-footer
+                button.btn.btn-primary.me-2(type='submit') Create Blood Center
+                button.btn.btn-outline-primary.me-2(type='button') Create and Add Another
+                button.btn.btn-ghost-danger.me-2(type='button') Cancel
