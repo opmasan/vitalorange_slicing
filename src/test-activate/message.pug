@@ -1,0 +1,17 @@
+extends ../layout/base.pug
+block content
+    - var activePage = 'test-activate'
+    .page.page-center
+      .container.container-tight.py-4
+        .text-center.mb-4
+          a.navbar-brand.navbar-brand-autodark(href='./index.html')
+            img.navbar-brand-image(src='./images/logo.png' width='110' height='32' alt='')
+        .card.card-md
+          .card-body
+            h2.h2.text-center.mb-4 Your test is activated
+            p.text-secondary.text-center
+              | Thanks! Feel free to reach out to our 
+              a.link(href="link-to-support-team") support team.
+
+        //- .text-center.text-secondary.mt-3
+          
