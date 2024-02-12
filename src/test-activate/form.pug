@@ -1,0 +1,21 @@
+extends ../layout/base.pug
+block content
+    - var activePage = 'test-activate'
+    .page.page-center
+      .container.container-tight.py-4
+        .text-center.mb-4
+          a.navbar-brand.navbar-brand-autodark(href='./index.html')
+            img.navbar-brand-image(src='./images/logo.png' width='110' height='32' alt='')
+        .card.card-md
+          .card-body
+            h2.h2.text-center.mb-4 Activate Your Test
+            p.text-secondary 
+              | Enter the unique test identifier received via QR code or another method to activate the test
+            form(action='./' method='get' autocomplete='off' novalidate='')
+              .mb-3
+                label.form-label Test Code
+                input.form-control(type='text' placeholder='Enter Test Code' autocomplete='off' value="TK355529-7")
+              .form-footer
+                button.btn.btn-primary.w-100(type='submit') Activate Test
+        //- .text-center.text-secondary.mt-3
+          
